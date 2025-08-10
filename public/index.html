@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orologio Minimalista</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/clock_style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="toolbar-left">
+            <button class="button">File</button>
+            <button class="button">Modifica</button>
+            <button class="button">Visualizza</button>
+            <button onclick="openFullscreen();">Hello World</button>
+        </div>
+
+        <div class="clock-wrapper">
+            <div class="clock-container">
+                <div class="clock">
+                    <div class="notch" style="--i:1;"></div>
+                    <div class="notch" style="--i:2;"></div>
+                    <div class="notch notch-main" style="--i:3;"></div>
+                    <div class="notch" style="--i:4;"></div>
+                    <div class="notch" style="--i:5;"></div>
+                    <div class="notch notch-main" style="--i:6;"></div>
+                    <div class="notch" style="--i:7;"></div>
+                    <div class="notch" style="--i:8;"></div>
+                    <div class="notch notch-main" style="--i:9;"></div>
+                    <div class="notch" style="--i:10;"></div>
+                    <div class="notch" style="--i:11;"></div>
+                    <div class="notch notch-main" style="--i:12;"></div>
+
+                    <div class="hand hour"></div>
+                    <div class="hand minute"></div>
+                    <div class="hand second"></div>
+                    <div class="center-circle"></div>
+
+                    <div class="digital-info">
+                        <div class="digital-time"></div>
+                        <div class="date"></div>
+                        <div class="day"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <p>Qui trovi il contenuto principale del sito.</p>
+        <div class="square"></div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/animations.js" type="module"></script>
+
+</body>
+
+</html>
