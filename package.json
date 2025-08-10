@@ -1,0 +1,24 @@
+{
+  "name": "portfoliowebsite",
+  "version": "1.0.0",
+  "description": "A powerful web-based no-code visual editor to create state-of-the-art, professionally formatted documents.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Typetide/VisualTex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Typetide/VisualTex/issues"
+  },
+  "homepage": "https://github.com/Typetide/VisualTex#readme",
+  "dependencies": {
+    "animejs": "^4.1.2"
+  }
+}
