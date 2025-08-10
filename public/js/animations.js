@@ -1,3 +1,3 @@
-import { animate } from "animejs";
+import { animate } from "../animejs";
 
 animate('.square', { borderRadius: 64 });
