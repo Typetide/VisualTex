@@ -1,6 +1,16 @@
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
 
+const checkbox = document.getElementById("fullscreen");
+
+function toggleFullscreen() {
+    if (checkbox.checked) {
+        openFullscreen();
+    } else {
+        closeFullscreen();
+    }
+}
+
 /* View in fullscreen */
 function openFullscreen() {
     if (elem.requestFullscreen) {

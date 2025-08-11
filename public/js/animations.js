@@ -1,3 +1,2 @@
-import { animate } from "../animejs";
+import { animate } from "/node_modules/animejs/types/index.js";
 
-animate('.square', { borderRadius: 64 });

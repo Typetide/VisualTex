@@ -11,6 +11,7 @@
 :root {
     --primary-color: #f0f0f0;
     --bg-color: #1a1a1a;
+    --secondary-bg-color: #2a2a2a;
     --accent1-color: #004d61;
     --accent2-color: #822659;
     --secondary-color: #3e5641;
@@ -26,41 +27,117 @@ body {
     color: var(--primary-color);
 }
 
+button {
+    font-family: Lexend, sans-serif;
+    font-weight: 250;
+}
+
 header {
-    background-color: var(--secondary-color);
-    padding: 10px 20px;
+    padding: 15px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    border-bottom: 1px solid var(--accent2-color);
+}
+
+.header-left {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding-left: 1%;
+}
+
+.header-right {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding-right: 1%;
 }
 
 main {
+    display: flex;
     flex-grow: 1;
-    padding: 40px;
     text-align: center;
 }
 
-.toolbar-left .button {
+.toolbar-left {
+    display: flex;
+}
+
+.button {
     background-color: transparent;
     color: var(--primary-color);
     border: none;
     padding: 8px 12px;
     cursor: pointer;
     font-size: 1em;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
+    border-radius: 6px;
+    transition: all 0.2s ease;
 }
 
-.toolbar-left .button:hover {
+.button:hover {
     background-color: #333;
+}
+
+.button:active {
+    background-color: #9a9a9a;
+}
+
+.button.outlined {
+    border-color: var(--primary-color);
+    border-width: 1.5px;
+    border-style: solid;
+}
+
+.button.outlined:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.button.outlined:active {
+    background-color: #9a9a9a;
+    border-color: #9a9a9a;
 }
 
 .clock-wrapper {
     height: 100%;
     display: flex;
     align-items: center;
+    padding: 20px;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-container i {
+    transition: all .3s ease;
+}
+
+.toggle-container #icon-on {
+    display: none;
+}
+
+#fullscreen {
+    display: none;
+}
+
+#fullscreen:hover+.toggle-container i {
+    opacity: .6;
+}
+
+#fullscreen:active+.toggle-container i {
+    opacity: .4;
+}
+
+#fullscreen:checked~.toggle-container #icon-off {
+    display: none;
+}
+
+#fullscreen:checked~.toggle-container #icon-on {
+    display: unset;
 }
 
 .clock-container {
@@ -69,9 +146,46 @@ main {
     align-items: center;
 }
 
-.square {
-    width: 100px;
-    height: 100px;
+.main-container {
+    display: flex;
+    flex-grow: 1;
+    padding: 0.5% 1% 1% 1%;
+    overflow: hidden;
+}
+
+.panel {
+    background-color: var(--secondary-bg-color);
+    flex-shrink: 0;
+    padding: 1%;
+    border-radius: 12px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-left {
+    width: 1%;
+}
+
+.canvas {
+    flex-grow: 1;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.canvas-grid {
+    width: 21cm;
+    /* Dimensioni fisse per un'area di lavoro A4 */
+    min-height: 29.7cm;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    background-color: red;
+    color: black;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: 600;
 }

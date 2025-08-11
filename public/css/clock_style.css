@@ -2,7 +2,7 @@
     position: relative;
     border-radius: 50%;
     background-color: transparent;
-    --clock-size: 100px;
+    --clock-size: 150px;
     width: var(--clock-size);
     height: var(--clock-size);
 }
@@ -77,19 +77,19 @@
     transform: translate(-50%, 40%);
     text-align: center;
     color: var(--primary-color);
-    font-size: 1em;
+    font-size: calc(0.05 * var(--clock-size));
     z-index: 4;
     line-height: 1.2;
 }
 
 .digital-time {
-    font-size: 2em;
+    font-size: calc(0.1 * var(--clock-size));
     font-weight: 500;
     color: var(--primary-color);
 }
 
 .date,
 .day {
-    font-size: 0.9em;
+    font-size: calc(0.05 * var(--clock-size));
     font-weight: 400;
 }

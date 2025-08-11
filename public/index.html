@@ -7,20 +7,32 @@
     <title>Orologio Minimalista</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/clock_style.css">
+
+    <script src="https://kit.fontawesome.com/c09f8960f4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <header>
-
-        <div class="toolbar-left">
-            <button class="button">File</button>
-            <button class="button">Modifica</button>
-            <button class="button">Visualizza</button>
-            <button onclick="openFullscreen();">Hello World</button>
+        <div class="header-left">
+            <div class="logo">Typetide Studio</div>
+            <div class="toolbar-left">
+                <button class="button">File</button>
+                <button class="button">Edit</button>
+                <button class="button">View</button>
+                <input type="checkbox" id="fullscreen" onchange="toggleFullscreen();">
+                <label for="fullscreen" class="toggle-container">
+                    <i id="icon-off" class="fa-solid fa-expand"></i>
+                    <i id="icon-on" class="fa-solid fa-compress"></i>
+                </label>
+                <button class="button">Undo</button>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="button outlined">Share</button>
         </div>
 
-        <div class="clock-wrapper">
+        <!-- <div class="clock-wrapper">
             <div class="clock-container">
                 <div class="clock">
                     <div class="notch" style="--i:1;"></div>
@@ -48,16 +60,34 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </header>
 
     <main>
-        <p>Qui trovi il contenuto principale del sito.</p>
-        <div class="square"></div>
+        <div class="main-container">
+            <aside class="panel left-panel">
+                <i class="fa-regular fa-arrow-right"></i>
+            </aside>
+
+            <section class="canvas">
+                <div class="canvas-grid">
+                    <div class="placeholder">
+                        Trascina qui gli elementi...
+                    </div>
+                </div>
+            </section>
+
+            <aside class="panel right-panel">
+                <h2 class="panel-title">Opzioni</h2>
+                <div class="panel-content">
+                    <p>Seleziona un elemento per modificare le proprietà.</p>
+                </div>
+            </aside>
+        </div>
     </main>
 
     <script src="js/main.js"></script>
-    <script src="js/clock.js"></script>
+    <!-- <script src="js/clock.js"></script> -->
     <script src="js/animations.js" type="module"></script>
 
 </body>
